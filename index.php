@@ -7,3 +7,5 @@ include "sql-connection.php";
     console.log(pokebowl);
     console.log(dranken);
 </script>
+
+hello world !!
