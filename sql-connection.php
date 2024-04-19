@@ -34,6 +34,8 @@ foreach ($result as $row) {
             break;
     }
 };
+
+$conn->close();
 ?>
 
 <script>
