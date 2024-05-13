@@ -1,4 +1,29 @@
-<a href="food.php?categorie=sushi">sushi</a>
-<a href="food.php?categorie=voordeel">voordeelbox</a>
-<a href="food.php?categorie=pokebowl">pokebowl</a>
-<a href="food.php?categorie=dranken">dranken</a>
+<?php
+
+declare(strict_types = 1);
+
+spl_autoload_register(function ($class) {
+    require __DIR__ . "/src/$class.php";
+});
+
+set_error_handler("errorHandler::handleError");
+set_exception_handler("errorHandler::handleException");
+
+header("Content-Type: application/json; charset=UTF-8");
+
+$parts = explode("/", $_SERVER['REQUEST_URI']);
+
+if ($parts[1] != "products") {
+    http_response_code(404);
+    exit;
+}
+
+$id = $parts[2] ?? null;
+
+$database = new database("localhost", "sushi-kiosk", "root", "");
+
+$gateway = new productGateway($database);
+
+$controller = new productController($gateway);
+
+$controller->processRequest($_SERVER['REQUEST_METHOD'], $id);
