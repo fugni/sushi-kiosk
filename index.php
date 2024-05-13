@@ -20,7 +20,9 @@ if ($parts[1] != "products") {
 
 $id = $parts[2] ?? null;
 
-$database = new database("localhost", "sushi-kiosk", "root", "");
+include "sql-credentials.php";
+
+$database = new database($host, $db, $dbUser, $dbPass);
 
 $gateway = new productGateway($database);
 
