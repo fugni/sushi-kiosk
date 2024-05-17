@@ -10,6 +10,7 @@ set_error_handler("errorHandler::handleError");
 set_exception_handler("errorHandler::handleException");
 
 header("Content-Type: application/json; charset=UTF-8");
+header("Access-Control-Allow-Origin: *");
 
 $parts = explode("/", $_SERVER['REQUEST_URI']);
 
