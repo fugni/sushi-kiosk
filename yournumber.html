@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Done</title>
     <link href="assets/style.css" rel="stylesheet">
+    <script src="script.js"></script> 
 
 </head>
 <body>
@@ -13,7 +14,14 @@
         uw bestellings nummer is:
     </div>
     <div class="yournumber">
-        1
+        <p id="number"></p>
     </div>
+
+    
 </body>
+
+<script>
+    document.getElementById("number").innerHTML = 
+    Math.floor(Math.random() * 101 + 1);
+    </script>
 </html>

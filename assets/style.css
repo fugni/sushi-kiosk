@@ -206,8 +206,21 @@
     height:70px;
     position:fixed;
     bottom:0;
-    background-color: #cdcdcd;
+    background-color: #d51410;
 }
+
+.afrekenen{
+    background-color:#8f1313;
+    width: 30%;
+    color:white;
+    padding:15px;
+    font-weight: 700;
+    text-align: center;
+    float: right;
+    border-radius: 50px;
+    margin-top:10px;
+    margin-right:20px;
+ }
 
 .totaalprijs{
     position:fixed;
