@@ -5,6 +5,22 @@ function category(selectedCategory) {
     var container = document.querySelector(".container");
     container.innerHTML = "";
 
+    var title = document.querySelector(".title");
+    switch (selectedCategory) {
+        case "sushi":
+            title.innerHTML = "Sushi"
+            break;
+        case "voordeel":
+            title.innerHTML = "Voordeel Boxen"
+            break;
+        case "pokebowl":
+            title.innerHTML = "Pokebowls"
+            break;
+        case "dranken":
+            title.innerHTML = "Dranken"
+            break;    
+    }
+
     fetch("https://u220722.gluwebsite.nl/products/" + selectedCategory)
         .then(response => response.json())
         .then(data => data.forEach(element => {

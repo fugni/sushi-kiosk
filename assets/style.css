@@ -267,5 +267,12 @@
     color:white;
     text-align: center;
     margin: 0 auto;
-    margin-top:10px;
+    margin-top:25px;
+    padding:10px;
+    
+}
+
+#terug {
+    text-decoration: none;
+
 }
