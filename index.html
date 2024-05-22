@@ -10,48 +10,25 @@
 </head>
 
 <body>
-
-
     <div class="leftcolumn">
-        <div class="logo"><img id="img" src="assets/img/ShabuShabuLogo.png"> </div>
-        <div id="sushibutton" class="sidebutton">Sushi<br><img src="./assets/img/sushi/salmon-ebi-roll.png"></div>
-        <div id="voordeelbox" class="sidebutton">Voordeel Boxen<br><img src="./assets/img/Sidebar/voordeelboxen.png">
+        <div class="logo"><img id="img" src="assets/img/ShabuShabuLogo.png"></div>
+        <div id="sushibutton" class="sidebutton" onclick="selectedCategory = 'sushi'; category(selectedCategory)">Sushi<br><img src="./assets/img/sushi/salmon-ebi-roll.png"></div>
+        <div id="voordeelbox" class="sidebutton" onclick="selectedCategory = 'voordeel'; category(selectedCategory)">Voordeel Boxen<br><img src="./assets/img/Sidebar/voordeelboxen.png">
         </div>
-        <div id="pokebowls" class="sidebutton">Pokebowls<br><img src="./assets/img/Sidebar/Pokebowls.png"></div>
-        <div id="dranken" class="sidebutton">Dranken<br><img src="./assets/img/Sidebar/Dranken.png"></div>
+        <div id="pokebowls" class="sidebutton" onclick="selectedCategory = 'pokebowl'; category(selectedCategory)">Pokebowls<br><img src="./assets/img/Sidebar/Pokebowls.png"></div>
+        <div id="dranken" class="sidebutton" onclick="selectedCategory = 'dranken'; category(selectedCategory)">Dranken<br><img src="./assets/img/Sidebar/Dranken.png"></div>
     </div>
     <div class="rightcolumn">
         <div class="title">Sushi</div>
         <div class="container">
-            <div class="item1 item"><img src="assets/img/sushi/salmon-ebi-roll.png">
-                <p>Salmon Ebi Roll</p><br>
-                <p>8st.</p>
-                <p>13,80</p><br>
-                <div class="toevoegen">
-                    <p>Toevoegen</p>
-                </div>
-            </div>
-            <div class="item2 item">Item 2</div>
-            <div class="item3 item">Item 3</div>
-            <div class="item4 item">Item 4</div>
-            <div class="item5 item">Item 5</div>
-            <div class="item6 item">Item 6</div>
-            <div class="item7 item">Item 7</div>
-            <div class="item8 item">Item 8</div>
-            <div class="item9 item">Item 9</div>
-            <div class="item10 item">Item 10</div>
+
         </div>
     </div>
     <div class="footer">
         <a href="./winkelmandje.html"><div class="afrekenen">Afrekenen</div></a>
     </div>
 
-    <script>
-        console.log(sushi);
-        console.log(voordeel);
-        console.log(pokebowl);
-        console.log(dranken);
-    </script>
+    <script src="script.js"></script>
 
 </body>
 
